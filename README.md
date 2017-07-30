@@ -14,6 +14,12 @@ All code is written in Java (unless the question otherwise specifies). Links to 
 **CHANGELOG**
 =============
 
+*Version 1.1*
+
+1.	Another Hackerrank problem (BreakingtheRecords) added.
+
+2.	First interview question (TwoSum) added.
+
 *Version 1.0*
 
 1.	Initial commit!
