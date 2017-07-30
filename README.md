@@ -1,7 +1,7 @@
 interview-prep
 ==============
 
-(Version 1.0)
+(Version 1.1)
 
 Practice for all interviews. This repository consists of:
 
