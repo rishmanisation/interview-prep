@@ -1,7 +1,7 @@
 interview-prep
 ==============
 
-(Version 1.0)
+(Version 1.2)
 
 Practice for all interviews. This repository consists of:
 
@@ -14,6 +14,12 @@ All code is written in Java (unless the question otherwise specifies). Links to 
 **CHANGELOG**
 =============
 
+*Version 1.2*
+
+1.	Added problems to implementation and warmup sections in Hackerrank.
+
+2.	Added FindPower to interview questions.
+
 *Version 1.1*
 
 1.	Another Hackerrank problem (BreakingtheRecords) added.
@@ -25,4 +31,3 @@ All code is written in Java (unless the question otherwise specifies). Links to 
 1.	Initial commit!
 
 2.	Four problems added to Hackerrank < Algorithms < Implementation. More to come soon!
-
