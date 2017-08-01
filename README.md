@@ -1,7 +1,11 @@
 interview-prep
 ==============
 
+<<<<<<< HEAD
 (Version 1.2)
+=======
+(Version 1.1)
+>>>>>>> 8ddaf36896d3f56628d3a51d2efb9af5f815e1d5
 
 Practice for all interviews. This repository consists of:
 
