@@ -7,6 +7,9 @@
  * Assumptions:
  * 1. All the directories needed are present.
  * 2. Commands such as mkdir, rm etc. are already implemented.
+ * 3. There are no folder name checks, as such checks are assumed to be implemented in
+ * 'mkdir'.
+ * 4. None of the folder names have spaces in them.
  * 
  * @author Rishabh Ananthan
  * @version 1.0
