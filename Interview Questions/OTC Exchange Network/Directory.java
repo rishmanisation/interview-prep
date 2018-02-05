@@ -105,16 +105,37 @@ public class Directory {
     /**
      * This is the main function. It consists of 6 test cases to verify that the
      * program runs fine.
+     * 
+     * Each of the comments inside the function contain a brief explanation of 
+     * what the case is testing for, before providing the current directory and 
+     * expected directory.
+     * 
+     * Current directory: the directory before the execution of the cd command(s)
+     * Expected directory: the directory after the execution of the cd command(s)
      */
     public static void main(String[] args) {
         final Shell shell = new Shell("/");
 
+        /*
+         * This test case is to make sure that the shell object has been correctly 
+         * created. 
+         * 
+         * Current directory: '/'
+         * Expected directory: '/'
+         */
         System.out.println("TEST 1");
         System.out.println("Expected path: /, Actual path: " + shell.path());
         assert shell.path().equals("/");
         System.out.println("Test success!");
         System.out.println(" ");
 
+        /*
+         * This test case is to make sure that cd doesn't change the directory from
+         * '/' to '//'. 
+         * 
+         * Current directory: '/'
+         * Expected directory: '/'
+         */
         System.out.println("TEST 2");
         shell.cd("/");
         System.out.println("Expected path: /, Actual path: " + shell.path());
@@ -122,6 +143,13 @@ public class Directory {
         System.out.println("Test success!");
         System.out.println(" ");
 
+        /*
+         * This test case is to make sure that cd is able to switch to the 'usr'
+         * directory and then go back to the root directory. 
+         * 
+         * Current directory: '/'
+         * Expected directory: '/'
+         */
         System.out.println("TEST 3");
         shell.cd("usr/..");
         System.out.println("Expected path: /, Actual path: " + shell.path());
@@ -129,6 +157,14 @@ public class Directory {
         System.out.println("Test success!");
         System.out.println(" ");
 
+        /*
+         * This test case is to make sure that cd is able to switch to /usr/local, 
+         * go back to /usr, return to /usr/local and then stay there when cd ./ is 
+         * executed.
+         * 
+         * Current directory: '/'
+         * Expected directory: '/usr/local'
+         */
         System.out.println("TEST 4");
         shell.cd("usr").cd("local");
         shell.cd("../local").cd("./");
@@ -137,6 +173,13 @@ public class Directory {
         System.out.println("Test success!");
         System.out.println(" ");
 
+        /*
+         * This test case is to make sure that cd is able to go back to /usr using
+         * the .. parameter.
+         * 
+         * Current directory: '/usr/local'
+         * Expected directory: '/usr' 
+         */
         System.out.println("TEST 5");
         shell.cd("..");
         System.out.println("Expected path: /usr, Actual path: " + shell.path());
@@ -144,6 +187,13 @@ public class Directory {
         System.out.println("Test success!");
         System.out.println(" ");
 
+        /*
+         * This test case is to make sure that cd is able to switch out of /usr into
+         * /lib.
+         * 
+         * Current directory: '/usr'
+         * Expected directory: '/lib' 
+         */
         System.out.println("TEST 6");
         shell.cd("//lib///");
         System.out.println("Expected path: /lib, Actual path: " + shell.path());
